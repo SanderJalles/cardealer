@@ -9,11 +9,11 @@ function Navegador() {
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link><Link className='home' to ="/">Home</Link></Nav.Link>
-            <Nav.Link><Link className = 'cadastro' to = "/cadastro">cadastro</Link></Nav.Link>
-            <Nav.Link><Link className = 'catalogo' to = "/catalogo">catalogo</Link></Nav.Link>
+          <Navbar.Brand href="" >Carros</Navbar.Brand>
+          <Nav className="me-auto centralizar">
+            <Nav><Link className='home' to ="/">Home</Link></Nav>
+            <Nav><Link className = 'cadastro' to = "/cadastro">cadastro</Link></Nav>
+            <Nav><Link className = 'catalogo' to = "/catalogo">catalogo</Link></Nav>
           </Nav>
         </Container>
       </Navbar>

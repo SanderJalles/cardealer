@@ -12,4 +12,8 @@ export function DeleteCarros(id) {
     return axios.delete(`http://localhost:8080/carros/deletecarro/${id}`)
 }
 
+export const EditarCarro = (id, novoCarro) => {
+    return axios.put(`http://localhost:8080/carros/editcarro/${id}`, novoCarro)
+};
+
 

@@ -13,3 +13,8 @@
     color: white;
 
 }
+
+.centralizar {
+    display: flex;
+    gap: 20px;
+}
