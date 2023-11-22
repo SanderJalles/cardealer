@@ -47,7 +47,7 @@ function BasicExample({ listaCarro }) {
 
   return (
     novaListaCarro && (novaListaCarro.map((carro, index) => (
-      <Card style={{ width: '18rem', marginBottom: '1rem', background: 'gray', color: 'white'}} key={index}>
+      <Card style={{ width: '18rem', marginBottom: '1rem', background: 'gray', color: 'white' }} key={index}>
         <Card.Body>
           <Card.Title>{carro.name}</Card.Title>
           <Card.Text>
@@ -59,32 +59,34 @@ function BasicExample({ listaCarro }) {
             </Col>
             <Col>
               <Button variant="primary" onClick={() => {
-                if(modoEdicao) {
+                setNome(carro.name)
+                setPreco(carro.preco)
+                if (modoEdicao) {
                   setIndiceAtual(index)
-                  if(index === indiceAtual) {
+                  if (index === indiceAtual) {
                     setModoEdicao(!modoEdicao)
                   }
                 } else {
                   setModoEdicao(!modoEdicao)
                   setIndiceAtual(index)
                 }
-                }}>Editar </Button>
+              }}>Editar </Button>
             </Col>
           </Row>
 
           {modoEdicao && indiceAtual == index ? <Row>
             <Row className="mb-2">
-              <input type="text" name="nome" placeholder="nome do carro" onChange={handleInput} />
+              <input type="text" name="nome" value={nome} onChange={handleInput} />
             </Row>
             <Row className="mb-2">
-              <input type="number" name="preco" placeholder="preço do carro" onChange={handleInput} />
+              <input type="number" name="preco" value={preco} onChange={handleInput} />
             </Row>
             <Button onClick={() => handleUpdate(carro.id)}>
               Salvar
             </Button>
-          </Row> 
-          :
-          ''
+          </Row>
+            :
+            ''
           }
         </Card.Body>
       </Card>
