@@ -3,14 +3,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ListarCarros } from "../../request";
 import BasicExample from "../Cards";
 import "./Catalogo.css";
+import CardUsuario from "../Cards/usuario";
+import { ListarUsuario } from "../../request/user";
 
-export default function Catalogo() {
-  const [listaCarro, setListaCaro] = useState([]);
+export default function ListaUsuario() {
+  const [listaUsuario, setListaUsuario] = useState([]);
 
   const request = async () => {
-    await ListarCarros().then((res) => setListaCaro(res.data));
+    await ListarUsuario().then((res) => setListaUsuario(res.data));
   };
-
 
   useEffect(() => {
     request();
@@ -18,7 +19,7 @@ export default function Catalogo() {
 
   return (
     <div className="catalogo-list">
-      <BasicExample listaCarro={listaCarro} />
+      <CardUsuario listaCliente={listaUsuario} />
     </div>
   );
 }
