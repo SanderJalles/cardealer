@@ -20,7 +20,7 @@ export default function Cadastrarcarro() {
   }
 
   return (
-    <div>
+    <div className="formCarro">
       <h2>Cadastro de carros</h2>
       <input type="text" placeholder="nome" onChange={e => setName(e.target.value)} />
       <br></br>
