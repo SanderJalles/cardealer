@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CriarCarros } from "../../request";
 import { useNavigate } from "react-router-dom";
+import Navegador from "../Navbar";
 
 export default function Cadastrarcarro() {
 
@@ -21,6 +22,7 @@ export default function Cadastrarcarro() {
 
   return (
     <div className="formCarro">
+      <Navegador />
       <h2>Cadastro de carros</h2>
       <input type="text" placeholder="nome" onChange={e => setName(e.target.value)} />
       <br></br>

@@ -5,6 +5,7 @@ import BasicExample from "../Cards";
 import "./Catalogo.css";
 import CardUsuario from "../Cards/usuario";
 import { ListarUsuario } from "../../request/user";
+import Navegador from "../Navbar";
 
 export default function ListaUsuario() {
   const [listaUsuario, setListaUsuario] = useState([]);
@@ -18,8 +19,11 @@ export default function ListaUsuario() {
   }, []);
 
   return (
-    <div className="catalogo-list">
-      <CardUsuario listaCliente={listaUsuario} />
+    <div>
+      <Navegador />
+      <div className="catalogo-list">
+        <CardUsuario listaCliente={listaUsuario} />
+      </div>
     </div>
   );
 }

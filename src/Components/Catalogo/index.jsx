@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ListarCarros } from "../../request";
 import BasicExample from "../Cards";
 import "./Catalogo.css";
+import Navegador from "../Navbar";
 
 export default function Catalogo() {
   const [listaCarro, setListaCaro] = useState([]);
@@ -17,8 +18,11 @@ export default function Catalogo() {
   }, []);
 
   return (
-    <div className="catalogo-list">
-      <BasicExample listaCarro={listaCarro} />
+    <div>
+      <Navegador />
+      <div className="catalogo-list">
+        <BasicExample listaCarro={listaCarro} />
+      </div>
     </div>
   );
 }
